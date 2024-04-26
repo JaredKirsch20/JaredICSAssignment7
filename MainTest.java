@@ -2,10 +2,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-class MainTest {
+public class MainTest {
 
     @Test
-    void main() {
+    public void main() {
         assertTrue(true);
     }
 }
