@@ -21,21 +21,21 @@ public class PolynomialTest {
     }
 
     @Test
-    public void testEvaluate() {
+    public void testevaluate() {
         // Test the evaluate method at x = 2
         int expectedValue = 11; // 2^2 + 2*2 + 3
         assertEquals(expectedValue, polynomial.evaluate(2));
     }
 
     @Test
-    public void testSortPoly() {
+    public void testsortPoly() {
         // Test the sortPoly method to ensure the highest order term is first
         polynomial.sortPoly();
         assertEquals(quadraticTerm, polynomial.terms.get(0));
     }
 
     @Test
-    public void testToString() {
+    public void testtoString() {
         // Test the toString method
         String expectedString = "x^2 + 2x + 3 ";
         polynomial.sortPoly(); // Ensure the polynomial is sorted before converting to string
@@ -43,14 +43,14 @@ public class PolynomialTest {
     }
 
     @Test
-    public void testGetOrder() {
+    public void testgetOrder() {
         // Test the getOrder method
         int expectedOrder = 2; // The order of x^2
         assertEquals(expectedOrder, polynomial.getOrder());
     }
 
     @Test
-    public void testAddTerm() {
+    public void testaddTerm() {
         // Test the addTerm method
         Term newTerm = new Term(4, 3); // Represents the term 4x^3
         polynomial.addTerm(newTerm);
