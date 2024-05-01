@@ -17,8 +17,8 @@ public class Polynomial{
 	
 	public int evaluate (int x){
 		int total = 0;
-		for (int i = 0; i < terms.size(); i++){
-			total += terms.get(i).evaluate (x);
+		for (Term term : terms){
+			total += term.evaluate(x);
 		}
 		return total;
 	}
@@ -44,13 +44,14 @@ public class Polynomial{
 	}
 	
 	public String toString(){
-		String s = "";
-		
-		for (int i = 0; i < terms.size(); i++){
-			s += terms.get(i).toString() + " + ";
-		}
-		
-		return s.substring(0, s.length()-2);
+		StringBuilder s = new StringBuilder();
+        for (int i = 0; i < terms.size(); i++) {
+            s.append(terms.get(i).toString());
+            if (i < terms.size() - 1) {
+                s.append(" + ");
+            }
+        }
+        return s.toString();
 	}
 	
 	public int getOrder(){
