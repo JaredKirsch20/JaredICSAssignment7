@@ -26,11 +26,12 @@ public class Term {
     }
 
     public String toString() {
-        // Return a string representation of the term
-        if (exp == 0) {
+        if(coeff == 1 && exp != 0) {
+            return (exp == 1) ? "x" : "x^" + exp;
+        } else if (exp == 0) {
             return String.valueOf(coeff);
-        } else if (coeff == 1) {
-            return exp;
+        } else if (exp == 1) {
+            return coeff + "x";
         } else {
             return coeff + "x^" + exp;
         }

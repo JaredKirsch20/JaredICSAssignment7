@@ -37,7 +37,7 @@ public class PolynomialTest {
     @Test
     public void testtoString() {
         // Test the toString method
-        String expectedString = "x^2 + 2x + 3 ";
+        String expectedString = "x^2 + 2x + 3";
         polynomial.sortPoly(); // Ensure the polynomial is sorted before converting to string
         assertEquals(expectedString, polynomial.toString());
     }
